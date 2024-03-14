@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle roror</title>
+</head>
+<body onload="main()">
+    <h1 >nakakaboang na e2</h1>
+    <script>
+        main();
+
+        function main()
+        {
+            var a = prompt("Enter the length of the first side of the triangle");
+            var b = prompt("Enter the length of the second side of the triangle");
+            var c = prompt("Enter the length of the last side of the triangle");
+            if (isNaN(a) || isNaN(b) || isNaN(c))
+            {
+                window.alert("There is an error with the input.");
+            }
+            else
+            {
+                determineTriangle(a, b, c);
+            }
+        }
+        function determineTriangle(a, b, c)
+        {
+            if(a === b && b === c)
+            {
+                window.alert("The Triangle is an EQUILATERAL!");
+            }
+            else if (a === b || b === c || c === a)
+            {
+                window.alert("The Triangle is an Iscosceles!");
+            }
+            else{
+                window.alert("The Triangle is a SCALENE!");
+            }
+        }
+    </script>
+</body>
+</html>
